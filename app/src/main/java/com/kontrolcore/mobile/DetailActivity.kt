@@ -21,6 +21,7 @@ class DetailActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
         name = intent.getStringExtra(EXTRA_NAME) ?: run { finish(); return }
         setContentView(R.layout.activity_detail)
+        setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         findViewById<View>(R.id.ack).setOnClickListener { send("ack", 1) }
         findViewById<View>(R.id.snooze).setOnClickListener { send("snooze", 1) }
@@ -46,6 +47,10 @@ class DetailActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.title).text = name
         findViewById<TextView>(R.id.meta).text = if (i == null) "Not on your list now: it may have recovered." else
             "${i.title}\nFirst alert ${Format.ago(i.since)} · ${i.count} ${if (i.count == 1) "alert" else "alerts"}${if (i.acknowledged) " · acknowledged" else ""}"
+        findViewById<TextView>(R.id.badge).apply {
+            visibility = if (i == null) View.GONE else View.VISIBLE
+            if (i != null) { text = Look.wordFor(i); setTextColor(Look.colorOf(context, i)) }
+        }
         val hasStep = i != null && i.step.isNotEmpty()
         findViewById<View>(R.id.stepLabel).visibility = if (hasStep) View.VISIBLE else View.GONE
         findViewById<TextView>(R.id.step).apply { text = i?.step ?: ""; visibility = if (hasStep) View.VISIBLE else View.GONE }

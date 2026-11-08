@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The palette of the extension (styles.css), calm: colour means state. Light values here, dark in values-night. -->
+<resources>
+    <color name="kc_bg">#F4F5F8</color>
+    <color name="kc_surface">#FFFFFF</color>
+    <color name="kc_text">#1A1D25</color>
+    <color name="kc_dim">#5A5F6C</color>
+    <color name="kc_blue">#2F63D8</color>
+    <color name="kc_on_blue">#FFFFFF</color>
+    <color name="kc_green">#1F7A4D</color>
+    <color name="kc_red">#C53D3D</color>
+    <color name="kc_amber">#A86A13</color>
+    <color name="kc_cyan">#117A8C</color>
+    <color name="kc_ack">#8A8F9B</color>
+</resources>

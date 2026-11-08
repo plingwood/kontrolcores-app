@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="kc_bg">#101318</color>
+    <color name="kc_surface">#181C23</color>
+    <color name="kc_text">#E9ECF2</color>
+    <color name="kc_dim">#9BA3B2</color>
+    <color name="kc_blue">#6B9CF2</color>
+    <color name="kc_on_blue">#0D1424</color>
+    <color name="kc_green">#58C48C</color>
+    <color name="kc_red">#EC7272</color>
+    <color name="kc_amber">#DFAA57</color>
+    <color name="kc_cyan">#62BCCB</color>
+    <color name="kc_ack">#6C7280</color>
+</resources>

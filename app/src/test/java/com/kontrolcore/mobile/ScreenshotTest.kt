@@ -14,6 +14,7 @@ import androidx.test.core.app.ApplicationProvider
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 import java.io.File
@@ -28,38 +29,42 @@ class ScreenshotTest {
     private fun inflate(layout: Int): View = LayoutInflater.from(ctx).inflate(layout, FrameHolder(ctx), false)
     private class FrameHolder(c: Context) : android.widget.FrameLayout(c)
 
-    private fun save(root: View, name: String, night: Boolean) {
+    private fun save(root: View, name: String, night: Boolean, toolbarTitle: String = "KontrolCore", back: Boolean = false) {
         val dm = ctx.resources.displayMetrics
-        val bar = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL }
-        val title = TextView(ctx).apply { text = name.substringAfter('-').replace('_', ' ').replaceFirstChar { it.uppercase() }; textSize = 20f; setPadding(48, 96, 48, 36); setTextColor(if (night) 0xFFFFFFFF.toInt() else 0xFF1B1B1F.toInt()) }
-        bar.addView(title); bar.addView(root, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
-        bar.setBackgroundColor(if (night) 0xFF1B1B1F.toInt() else 0xFFFEFBFF.toInt())
-        bar.measure(View.MeasureSpec.makeMeasureSpec(dm.widthPixels, View.MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(dm.heightPixels, View.MeasureSpec.EXACTLY))
-        bar.layout(0, 0, dm.widthPixels, dm.heightPixels)
+        root.findViewById<com.google.android.material.appbar.MaterialToolbar>(R.id.toolbar)?.apply {
+            title = toolbarTitle
+            if (!back) logo = androidx.core.content.ContextCompat.getDrawable(context, R.drawable.ic_launcher)
+            else navigationIcon = androidx.core.content.ContextCompat.getDrawable(context, androidx.appcompat.R.drawable.abc_ic_ab_back_material)?.mutate()?.also { it.setTint(0xFF888888.toInt()) }
+        }
+        val frame = android.widget.FrameLayout(ctx).apply { setBackgroundColor(androidx.core.content.ContextCompat.getColor(ctx, R.color.kc_bg)); addView(root) }
+        frame.measure(View.MeasureSpec.makeMeasureSpec(dm.widthPixels, View.MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(dm.heightPixels, View.MeasureSpec.EXACTLY))
+        frame.layout(0, 0, dm.widthPixels, dm.heightPixels)
         val bmp = Bitmap.createBitmap(dm.widthPixels, dm.heightPixels, Bitmap.Config.ARGB_8888)
-        bar.draw(Canvas(bmp))
+        frame.draw(Canvas(bmp))
         val dir = File("build/screens").apply { mkdirs() }
-        FileOutputStream(File(dir, "$name.png")).use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        FileOutputStream(File(dir, "$name${if (night) "-dark" else ""}.png")).use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
     }
 
-    private fun row(parent: ViewGroup, name: String, summary: String, meta: String, dim: Boolean = false) {
+    private fun row(parent: ViewGroup, name: String, summary: String, meta: String, color: Int, dim: Boolean = false) {
         val v = LayoutInflater.from(ctx).inflate(R.layout.item_inbox, parent, false)
         v.findViewById<TextView>(R.id.name).text = name; v.findViewById<TextView>(R.id.summary).text = summary; v.findViewById<TextView>(R.id.meta).text = meta
-        if (dim) v.alpha = 0.55f
+        Look.tintDot(v.findViewById(R.id.dot), androidx.core.content.ContextCompat.getColor(ctx, color))
+        if (dim) v.alpha = 0.6f
         parent.addView(v)
     }
 
     private fun inbox(): View {
         val v = inflate(R.layout.activity_main) as ViewGroup
-        v.findViewById<TextView>(R.id.connection).text = "Connected to your alert topic."
+        v.findViewById<TextView>(R.id.connection).apply { text = "Connected to your alert topic."; setCompoundDrawablesRelativeWithIntrinsicBounds(androidx.core.content.ContextCompat.getDrawable(context, R.drawable.dot)?.mutate()?.also { d -> d.setTint(androidx.core.content.ContextCompat.getColor(context, R.color.kc_green)) }, null, null, null) }
         v.findViewById<View>(R.id.empty).visibility = View.GONE
         val list = v.findViewById<View>(R.id.list); val host = list.parent as ViewGroup
         host.removeView(list)
         val col = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL }
-        row(col, "Checkout flow", "Click \"Pay now\"", "4 min ago · 3 alerts")
-        row(col, "Login", "Needs a look", "1 h ago · 1 alert")
-        row(col, "Nightly regression", "Failing", "2 h ago · 2 alerts")
-        row(col, "Search", "Has gone quiet", "5 h ago · 1 alert · acknowledged", dim = true)
+        row(col, "Checkout flow", "Click \"Pay now\"", "Failing · 4 min ago · 3 alerts", R.color.kc_red)
+        row(col, "Login", "Page is asking for a sign-in", "Needs a look · 1 h ago · 1 alert", R.color.kc_amber)
+        row(col, "Nightly regression", "Suite failed: 1 of 4", "Failing · 2 h ago · 2 alerts", R.color.kc_red)
+        row(col, "Uptime check", "Has gone quiet", "Gone quiet · 3 h ago · 1 alert", R.color.kc_blue)
+        row(col, "Search", "Has gone quiet", "Acknowledged · 5 h ago · 1 alert", R.color.kc_ack, dim = true)
         host.addView(col, 0)
         v.findViewById<TextView>(R.id.message).apply { visibility = View.VISIBLE; text = "Sent. Waiting for your computer (it looks about once a minute)…" }
         return v
@@ -67,6 +72,7 @@ class ScreenshotTest {
 
     private fun detail(): View {
         val v = inflate(R.layout.activity_detail)
+        v.findViewById<TextView>(R.id.badge).apply { text = "Failing"; setTextColor(androidx.core.content.ContextCompat.getColor(ctx, R.color.kc_red)) }
         v.findViewById<TextView>(R.id.title).text = "Checkout flow"
         v.findViewById<TextView>(R.id.meta).text = "\"Checkout flow\" has failed 3 times in a row\nFirst alert 2 h ago · 3 alerts"
         v.findViewById<TextView>(R.id.step).text = "Click \"Pay now\""
@@ -76,8 +82,22 @@ class ScreenshotTest {
         return v
     }
 
-    @Test fun lightInbox() = save(inbox(), "1-inbox", false)
-    @Test fun lightDetail() = save(detail(), "2-failure_detail", false)
-    @Test fun lightPair() = save(inflate(R.layout.activity_pair), "3-pairing", false)
-    @Test fun lightEmpty() { val v = inflate(R.layout.activity_main); v.findViewById<TextView>(R.id.connection).text = "Connected to your alert topic."; save(v, "4-nothing_needs_you", false) }
+    private fun shot(name: String, night: Boolean, back: Boolean = false, build: () -> View) {
+        RuntimeEnvironment.setQualifiers(if (night) "+night" else "+notnight") // before inflating, so the views get the right theme
+        save(build(), name, night, back = back)
+    }
+
+    @Test fun inboxLight() = shot("1-inbox", false) { inbox() }
+    @Test fun inboxDark() = shot("1-inbox", true) { inbox() }
+    @Test fun detailLight() = shot("2-failure_detail", false, true) { detail() }
+    @Test fun detailDark() = shot("2-failure_detail", true, true) { detail() }
+    @Test fun pairLight() = shot("3-pairing", false) { inflate(R.layout.activity_pair) }
+    @Test fun pairDark() = shot("3-pairing", true) { inflate(R.layout.activity_pair) }
+    @Test fun emptyLight() = shot("4-nothing_needs_you", false) { empty() }
+
+    private fun empty(): View {
+        val v = inflate(R.layout.activity_main)
+        v.findViewById<TextView>(R.id.connection).apply { text = "Connected to your alert topic."; setCompoundDrawablesRelativeWithIntrinsicBounds(androidx.core.content.ContextCompat.getDrawable(context, R.drawable.dot)?.mutate()?.also { d -> d.setTint(androidx.core.content.ContextCompat.getColor(context, R.color.kc_green)) }, null, null, null) }
+        return v
+    }
 }

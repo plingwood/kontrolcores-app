@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -11,7 +18,8 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+        <TextView android:id="@+id/badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/card" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:textAppearance="?attr/textAppearanceLabelLarge" />
+        <TextView android:id="@+id/title" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceHeadlineSmall" />
         <TextView android:id="@+id/meta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textAppearance="?attr/textAppearanceBodySmall" />
         <TextView android:id="@+id/stepLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/failed_step" android:textAppearance="?attr/textAppearanceLabelLarge" />
         <TextView android:id="@+id/step" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceBodyLarge" android:textIsSelectable="true" />
@@ -27,3 +35,4 @@
         <com.google.android.material.button.MaterialButton android:id="@+id/open" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/open_page" />
     </LinearLayout>
 </ScrollView>
+</LinearLayout>

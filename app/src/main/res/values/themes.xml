@@ -1,6 +1,16 @@
 <resources>
-    <style name="Theme.KontrolCore" parent="Theme.Material3.DayNight">
-        <item name="colorPrimary">#3B82F6</item>
-        <item name="colorOnPrimary">#FFFFFF</item>
+    <style name="Theme.KontrolCore" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/kc_blue</item>
+        <item name="colorOnPrimary">@color/kc_on_blue</item>
+        <item name="colorError">@color/kc_red</item>
+        <item name="android:colorBackground">@color/kc_bg</item>
+        <item name="android:windowBackground">@color/kc_bg</item>
+        <item name="colorSurface">@color/kc_surface</item>
+        <item name="colorOnSurface">@color/kc_text</item>
+        <item name="colorOnBackground">@color/kc_text</item>
+        <item name="colorOnSurfaceVariant">@color/kc_dim</item>
+        <item name="colorOutline">@color/kc_dim</item>
+        <item name="android:statusBarColor">@color/kc_surface</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>

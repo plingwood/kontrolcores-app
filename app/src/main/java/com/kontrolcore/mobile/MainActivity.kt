@@ -29,6 +29,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(findViewById(R.id.toolbar))
+        supportActionBar?.setLogo(R.drawable.ic_launcher)
+        supportActionBar?.setDisplayUseLogoEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
         findViewById<RecyclerView>(R.id.list).apply { layoutManager = LinearLayoutManager(this@MainActivity); adapter = this@MainActivity.adapter }
         findViewById<View>(R.id.statusButton).setOnClickListener { send("status", "") }
         findViewById<View>(R.id.runButton).setOnClickListener { askRunOrStop() }
@@ -60,7 +64,11 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.empty).visibility = if (items.isEmpty()) View.VISIBLE else View.GONE
         val needs = items.count { !it.acknowledged }
         title = if (needs == 0) getString(R.string.app_name) else "$needs need${if (needs == 1) "s" else ""} you"
-        findViewById<TextView>(R.id.connection).text = if (Repo.connected) "Connected to your alert topic." else (Repo.connectionNote.ifEmpty { "Connecting…" })
+        findViewById<TextView>(R.id.connection).apply {
+            text = if (Repo.connected) "Connected to your alert topic." else (Repo.connectionNote.ifEmpty { "Connecting…" })
+            setCompoundDrawablesRelativeWithIntrinsicBounds(androidx.core.content.ContextCompat.getDrawable(context, R.drawable.dot), null, null, null)
+            compoundDrawablesRelative[0]?.mutate()?.setTint(androidx.core.content.ContextCompat.getColor(context, if (Repo.connected) R.color.kc_green else R.color.kc_amber))
+        }
     }
 
     private fun send(command: String, name: String) {
@@ -109,20 +117,20 @@ class MainActivity : AppCompatActivity() {
         private var items: List<InboxItem> = emptyList()
         fun submit(list: List<InboxItem>) { items = list; notifyDataSetChanged() }
         class Holder(v: View) : RecyclerView.ViewHolder(v) {
-            val name: TextView = v.findViewById(R.id.name); val summary: TextView = v.findViewById(R.id.summary); val meta: TextView = v.findViewById(R.id.meta)
+            val dot: View = v.findViewById(R.id.dot); val name: TextView = v.findViewById(R.id.name); val summary: TextView = v.findViewById(R.id.summary); val meta: TextView = v.findViewById(R.id.meta)
         }
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = Holder(LayoutInflater.from(parent.context).inflate(R.layout.item_inbox, parent, false))
         override fun getItemCount() = items.size
         override fun onBindViewHolder(h: Holder, position: Int) {
             val i = items[position]
             h.name.text = i.name
+            Look.tintDot(h.dot, Look.colorOf(h.itemView.context, i))
             h.summary.text = i.summary
             h.meta.text = buildString {
-                append(Format.ago(i.last))
+                append(Look.wordFor(i)).append(" · ").append(Format.ago(i.last))
                 append(" · ").append(i.count).append(if (i.count == 1) " alert" else " alerts")
-                if (i.acknowledged) append(" · acknowledged")
-            }
-            h.itemView.alpha = if (i.acknowledged) 0.55f else 1f
+                            }
+            h.itemView.alpha = if (i.acknowledged) 0.6f else 1f
             h.itemView.setOnClickListener { onClick(i) }
         }
     }
