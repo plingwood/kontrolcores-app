@@ -1,0 +1,1104 @@
+{
+  "note": "Made by mobile/tools/make-vectors.js from totp.js and alert-rules.js. Do not edit by hand.",
+  "totp": [
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 0,
+      "counter": 0,
+      "code": "755224"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 29,
+      "counter": 0,
+      "code": "755224"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 30,
+      "counter": 1,
+      "code": "287082"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 59,
+      "counter": 1,
+      "code": "287082"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 60,
+      "counter": 2,
+      "code": "359152"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 1111111109,
+      "counter": 37037036,
+      "code": "081804"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 1111111111,
+      "counter": 37037037,
+      "code": "050471"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 1234567890,
+      "counter": 41152263,
+      "code": "005924"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 1731024000,
+      "counter": 57700800,
+      "code": "955923"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 1731024029,
+      "counter": 57700800,
+      "code": "955923"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 1731024030,
+      "counter": 57700801,
+      "code": "959884"
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "time": 2000000000,
+      "counter": 66666666,
+      "code": "279037"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 0,
+      "counter": 0,
+      "code": "282760"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 29,
+      "counter": 0,
+      "code": "282760"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 30,
+      "counter": 1,
+      "code": "996554"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 59,
+      "counter": 1,
+      "code": "996554"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 60,
+      "counter": 2,
+      "code": "602287"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 1111111109,
+      "counter": 37037036,
+      "code": "071271"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 1111111111,
+      "counter": 37037037,
+      "code": "358462"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 1234567890,
+      "counter": 41152263,
+      "code": "742275"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 1731024000,
+      "counter": 57700800,
+      "code": "932341"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 1731024029,
+      "counter": 57700800,
+      "code": "932341"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 1731024030,
+      "counter": 57700801,
+      "code": "235470"
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "time": 2000000000,
+      "counter": 66666666,
+      "code": "890699"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 0,
+      "counter": 0,
+      "code": "282760"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 29,
+      "counter": 0,
+      "code": "282760"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 30,
+      "counter": 1,
+      "code": "996554"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 59,
+      "counter": 1,
+      "code": "996554"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 60,
+      "counter": 2,
+      "code": "602287"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 1111111109,
+      "counter": 37037036,
+      "code": "071271"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 1111111111,
+      "counter": 37037037,
+      "code": "358462"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 1234567890,
+      "counter": 41152263,
+      "code": "742275"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 1731024000,
+      "counter": 57700800,
+      "code": "932341"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 1731024029,
+      "counter": 57700800,
+      "code": "932341"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 1731024030,
+      "counter": 57700801,
+      "code": "235470"
+    },
+    {
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "time": 2000000000,
+      "counter": 66666666,
+      "code": "890699"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 0,
+      "counter": 0,
+      "code": "462371"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 29,
+      "counter": 0,
+      "code": "462371"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 30,
+      "counter": 1,
+      "code": "765705"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 59,
+      "counter": 1,
+      "code": "765705"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 60,
+      "counter": 2,
+      "code": "816065"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 1111111109,
+      "counter": 37037036,
+      "code": "319116"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 1111111111,
+      "counter": 37037037,
+      "code": "100631"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 1234567890,
+      "counter": 41152263,
+      "code": "434900"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 1731024000,
+      "counter": 57700800,
+      "code": "849256"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 1731024029,
+      "counter": 57700800,
+      "code": "849256"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 1731024030,
+      "counter": 57700801,
+      "code": "865474"
+    },
+    {
+      "secret": "MFRGGZDFMZTWQ2LK====",
+      "time": 2000000000,
+      "counter": 66666666,
+      "code": "443123"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 0,
+      "counter": 0,
+      "code": "546858"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 29,
+      "counter": 0,
+      "code": "546858"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 30,
+      "counter": 1,
+      "code": "043081"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 59,
+      "counter": 1,
+      "code": "043081"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 60,
+      "counter": 2,
+      "code": "922960"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 1111111109,
+      "counter": 37037036,
+      "code": "636914"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 1111111111,
+      "counter": 37037037,
+      "code": "070572"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 1234567890,
+      "counter": 41152263,
+      "code": "371074"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 1731024000,
+      "counter": 57700800,
+      "code": "993600"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 1731024029,
+      "counter": 57700800,
+      "code": "993600"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 1731024030,
+      "counter": 57700801,
+      "code": "951140"
+    },
+    {
+      "secret": "KRSXG5CTMVRXEZLU",
+      "time": 2000000000,
+      "counter": 66666666,
+      "code": "850578"
+    }
+  ],
+  "decode": [
+    {
+      "text": "JBSWY3DPEHPK3PXP",
+      "hex": "48656c6c6f21deadbeef"
+    },
+    {
+      "text": "jbsw y3dp",
+      "hex": "48656c6c6f"
+    },
+    {
+      "text": "MFRGG",
+      "hex": "616263"
+    },
+    {
+      "text": "MFRGGZA=",
+      "hex": "61626364"
+    },
+    {
+      "text": "AA==",
+      "hex": "00"
+    },
+    {
+      "text": "",
+      "hex": null
+    },
+    {
+      "text": "   ",
+      "hex": null
+    },
+    {
+      "text": "1",
+      "hex": null
+    },
+    {
+      "text": "ABC!",
+      "hex": null
+    },
+    {
+      "text": "GEZDGNBVGY3TQOJQ",
+      "hex": "31323334353637383930"
+    }
+  ],
+  "encode": [
+    {
+      "hex": "",
+      "text": ""
+    },
+    {
+      "hex": "00",
+      "text": "AA"
+    },
+    {
+      "hex": "ff",
+      "text": "74"
+    },
+    {
+      "hex": "666f6f",
+      "text": "MZXW6"
+    },
+    {
+      "hex": "666f6f626172",
+      "text": "MZXW6YTBOI"
+    },
+    {
+      "hex": "3132333435363738393031323334353637383930",
+      "text": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ"
+    }
+  ],
+  "parse": [
+    {
+      "message": "RUN Checkout flow #482913",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout flow",
+        "hours": 1,
+        "code": "482913"
+      }
+    },
+    {
+      "message": "RUN Checkout flow #482913",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout flow #482913",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "run Checkout flow #482913",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout flow",
+        "hours": 1,
+        "code": "482913"
+      }
+    },
+    {
+      "message": "run Checkout flow #482913",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout flow #482913",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "Run  Checkout   flow  #482913",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout   flow",
+        "hours": 1,
+        "code": "482913"
+      }
+    },
+    {
+      "message": "Run  Checkout   flow  #482913",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout   flow  #482913",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "STOP Checkout #123456",
+      "hasCode": true,
+      "result": {
+        "command": "stop",
+        "name": "Checkout",
+        "hours": 1,
+        "code": "123456"
+      }
+    },
+    {
+      "message": "STOP Checkout #123456",
+      "hasCode": false,
+      "result": {
+        "command": "stop",
+        "name": "Checkout #123456",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "PAUSE Login #000001",
+      "hasCode": true,
+      "result": {
+        "command": "pause",
+        "name": "Login",
+        "hours": 1,
+        "code": "000001"
+      }
+    },
+    {
+      "message": "PAUSE Login #000001",
+      "hasCode": false,
+      "result": {
+        "command": "pause",
+        "name": "Login #000001",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "START Login #999999",
+      "hasCode": true,
+      "result": {
+        "command": "start",
+        "name": "Login",
+        "hours": 1,
+        "code": "999999"
+      }
+    },
+    {
+      "message": "START Login #999999",
+      "hasCode": false,
+      "result": {
+        "command": "start",
+        "name": "Login #999999",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RESET Orders #111111",
+      "hasCode": true,
+      "result": {
+        "command": "reset",
+        "name": "Orders",
+        "hours": 1,
+        "code": "111111"
+      }
+    },
+    {
+      "message": "RESET Orders #111111",
+      "hasCode": false,
+      "result": {
+        "command": "reset",
+        "name": "Orders #111111",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "ROW Orders 5 #111111",
+      "hasCode": true,
+      "result": {
+        "command": "row",
+        "name": "Orders 5",
+        "hours": 1,
+        "code": "111111"
+      }
+    },
+    {
+      "message": "ROW Orders 5 #111111",
+      "hasCode": false,
+      "result": {
+        "command": "row",
+        "name": "Orders 5 #111111",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "ACK Checkout #222222",
+      "hasCode": true,
+      "result": {
+        "command": "ack",
+        "name": "Checkout",
+        "hours": 1,
+        "code": "222222"
+      }
+    },
+    {
+      "message": "ACK Checkout #222222",
+      "hasCode": false,
+      "result": {
+        "command": "ack",
+        "name": "Checkout #222222",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "SNOOZE Checkout #333333",
+      "hasCode": true,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout",
+        "hours": 1,
+        "code": "333333"
+      }
+    },
+    {
+      "message": "SNOOZE Checkout #333333",
+      "hasCode": false,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout #333333",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "SNOOZE 2h Checkout #333333",
+      "hasCode": true,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout",
+        "hours": 2,
+        "code": "333333"
+      }
+    },
+    {
+      "message": "SNOOZE 2h Checkout #333333",
+      "hasCode": false,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout #333333",
+        "hours": 2,
+        "code": null
+      }
+    },
+    {
+      "message": "snooze 24h Checkout #333333",
+      "hasCode": true,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout",
+        "hours": 24,
+        "code": "333333"
+      }
+    },
+    {
+      "message": "snooze 24h Checkout #333333",
+      "hasCode": false,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout #333333",
+        "hours": 24,
+        "code": null
+      }
+    },
+    {
+      "message": "snooze 99h Checkout #333333",
+      "hasCode": true,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout",
+        "hours": 24,
+        "code": "333333"
+      }
+    },
+    {
+      "message": "snooze 99h Checkout #333333",
+      "hasCode": false,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout #333333",
+        "hours": 24,
+        "code": null
+      }
+    },
+    {
+      "message": "snooze 0h Checkout #333333",
+      "hasCode": true,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout",
+        "hours": 1,
+        "code": "333333"
+      }
+    },
+    {
+      "message": "snooze 0h Checkout #333333",
+      "hasCode": false,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout #333333",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "SNOOZE 3 h Checkout #333333",
+      "hasCode": true,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout",
+        "hours": 3,
+        "code": "333333"
+      }
+    },
+    {
+      "message": "SNOOZE 3 h Checkout #333333",
+      "hasCode": false,
+      "result": {
+        "command": "snooze",
+        "name": "Checkout #333333",
+        "hours": 3,
+        "code": null
+      }
+    },
+    {
+      "message": "snooze 2h #333333",
+      "hasCode": true,
+      "result": {
+        "command": "snooze",
+        "name": "2h",
+        "hours": 1,
+        "code": "333333"
+      }
+    },
+    {
+      "message": "snooze 2h #333333",
+      "hasCode": false,
+      "result": {
+        "command": "snooze",
+        "name": "#333333",
+        "hours": 2,
+        "code": null
+      }
+    },
+    {
+      "message": "STATUS #444444",
+      "hasCode": true,
+      "result": {
+        "command": "status",
+        "name": "",
+        "hours": 1,
+        "code": "444444"
+      }
+    },
+    {
+      "message": "STATUS #444444",
+      "hasCode": false,
+      "result": {
+        "command": "status",
+        "name": "#444444",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "status",
+      "hasCode": true,
+      "result": {
+        "command": "status",
+        "name": "",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "status",
+      "hasCode": false,
+      "result": {
+        "command": "status",
+        "name": "",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "STATUS Checkout #444444",
+      "hasCode": true,
+      "result": {
+        "command": "status",
+        "name": "Checkout",
+        "hours": 1,
+        "code": "444444"
+      }
+    },
+    {
+      "message": "STATUS Checkout #444444",
+      "hasCode": false,
+      "result": {
+        "command": "status",
+        "name": "Checkout #444444",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN #555555",
+      "hasCode": true,
+      "result": null
+    },
+    {
+      "message": "RUN #555555",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "#555555",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN",
+      "hasCode": true,
+      "result": null
+    },
+    {
+      "message": "RUN",
+      "hasCode": false,
+      "result": null
+    },
+    {
+      "message": "RUN Checkout",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN Checkout",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN Checkout #12345",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout #12345",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN Checkout #12345",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout #12345",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN Checkout #1234567",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout #1234567",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN Checkout #1234567",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout #1234567",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN Checkout#123456",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout#123456",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN Checkout#123456",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout#123456",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "DANCE Checkout #123456",
+      "hasCode": true,
+      "result": null
+    },
+    {
+      "message": "DANCE Checkout #123456",
+      "hasCode": false,
+      "result": null
+    },
+    {
+      "message": "",
+      "hasCode": true,
+      "result": null
+    },
+    {
+      "message": "",
+      "hasCode": false,
+      "result": null
+    },
+    {
+      "message": "   ",
+      "hasCode": true,
+      "result": null
+    },
+    {
+      "message": "   ",
+      "hasCode": false,
+      "result": null
+    },
+    {
+      "message": "RUN Shop/Checkout flow #482913",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Shop/Checkout flow",
+        "hours": 1,
+        "code": "482913"
+      }
+    },
+    {
+      "message": "RUN Shop/Checkout flow #482913",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Shop/Checkout flow #482913",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN  #482913",
+      "hasCode": true,
+      "result": null
+    },
+    {
+      "message": "RUN  #482913",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "#482913",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "  RUN Checkout #482913  ",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout",
+        "hours": 1,
+        "code": "482913"
+      }
+    },
+    {
+      "message": "  RUN Checkout #482913  ",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout #482913",
+        "hours": 1,
+        "code": null
+      }
+    },
+    {
+      "message": "RUN Checkout flow\n#482913",
+      "hasCode": true,
+      "result": {
+        "command": "run",
+        "name": "Checkout flow",
+        "hours": 1,
+        "code": "482913"
+      }
+    },
+    {
+      "message": "RUN Checkout flow\n#482913",
+      "hasCode": false,
+      "result": {
+        "command": "run",
+        "name": "Checkout flow\n#482913",
+        "hours": 1,
+        "code": null
+      }
+    }
+  ],
+  "format": [
+    {
+      "command": "RUN",
+      "name": "Checkout flow",
+      "hours": 1,
+      "code": "482913",
+      "message": "RUN Checkout flow #482913"
+    },
+    {
+      "command": "stop",
+      "name": "Checkout",
+      "hours": 1,
+      "code": "000123",
+      "message": "STOP Checkout #000123"
+    },
+    {
+      "command": "PAUSE",
+      "name": "Shop/Checkout",
+      "hours": 1,
+      "code": "123456",
+      "message": "PAUSE Shop/Checkout #123456"
+    },
+    {
+      "command": "start",
+      "name": "Login",
+      "hours": 1,
+      "code": "654321",
+      "message": "START Login #654321"
+    },
+    {
+      "command": "ack",
+      "name": "Checkout",
+      "hours": 1,
+      "code": "222222",
+      "message": "ACK Checkout #222222"
+    },
+    {
+      "command": "snooze",
+      "name": "Checkout",
+      "hours": 1,
+      "code": "333333",
+      "message": "SNOOZE Checkout #333333"
+    },
+    {
+      "command": "snooze",
+      "name": "Checkout",
+      "hours": 2,
+      "code": "333333",
+      "message": "SNOOZE 2h Checkout #333333"
+    },
+    {
+      "command": "snooze",
+      "name": "Checkout",
+      "hours": 24,
+      "code": "333333",
+      "message": "SNOOZE 24h Checkout #333333"
+    },
+    {
+      "command": "status",
+      "name": "",
+      "hours": 1,
+      "code": "444444",
+      "message": "STATUS #444444"
+    },
+    {
+      "command": "reset",
+      "name": "Orders",
+      "hours": 1,
+      "code": "111111",
+      "message": "RESET Orders #111111"
+    },
+    {
+      "command": "row",
+      "name": "Orders 5",
+      "hours": 1,
+      "code": "111111",
+      "message": "ROW Orders 5 #111111"
+    }
+  ]
+}
