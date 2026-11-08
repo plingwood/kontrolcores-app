@@ -60,7 +60,41 @@ async function build() {
     return { command, name, hours, code, message };
   });
 
-  return { note: 'Made by mobile/tools/make-vectors.js from totp.js and alert-rules.js. Do not edit by hand.', totp, decode, encode, parse, format };
+  // Tickets (KON-490): the Acknowledge and Snooze buttons. Made with a fixed "now" so the file is stable.
+  const ticketNow = 1731024000;
+  const ticketSpecs = [['ack', 'Checkout flow'], ['snooze', 'Checkout flow'], ['ack', '  Checkout   FLOW '], ['ack', 'Shop/Checkout (v2)'], ['snooze', 'Login']];
+  const tickets = [];
+  for (const secret of ['JBSWY3DPEHPK3PXP', 'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ']) {
+    for (const [command, name] of ticketSpecs) {
+      const ticket = await TOTP.makeTicket(secret, command, name, ticketNow);
+      const checks = [];
+      for (const at of [ticketNow, ticketNow + 3600, ticketNow + TOTP.TICKET_LIFE_SECONDS, ticketNow + TOTP.TICKET_LIFE_SECONDS + 1, ticketNow - 60, ticketNow - 3 * TOTP.TICKET_LIFE_SECONDS]) {
+        checks.push({ at, ok: await TOTP.checkTicket(secret, command, name, ticket, at) });
+      }
+      const wrongName = await TOTP.checkTicket(secret, command, name + ' x', ticket, ticketNow);
+      const wrongCommand = await TOTP.checkTicket(secret, command === 'ack' ? 'snooze' : 'ack', name, ticket, ticketNow);
+      const wrongSecret = await TOTP.checkTicket('KRSXG5CTMVRXEZLU', command, name, ticket, ticketNow);
+      tickets.push({ secret, command, name, ticket, checks, wrongName, wrongCommand, wrongSecret });
+    }
+  }
+  const ticketMessages = ['ACK Checkout flow ~65f3a1b2.ABCDEFGHIJKLMNOP', 'snooze Checkout flow ~65f3a1b2.abcdefghijklmnop', 'ack  Checkout   flow  ~65F3A1B2.ABCDEFGHIJKLMNOP',
+    'ACK ~65f3a1b2.ABCDEFGHIJKLMNOP', 'RUN Checkout ~65f3a1b2.ABCDEFGHIJKLMNOP', 'ACK Checkout ~zz.ABCDEFGHIJKLMNOP', 'ACK Checkout ~65f3a1b2.ABCDEFGHIJKLMNO',
+    'ACK Checkout #123456', 'ACK Shop/Checkout (v2) ~1.AAAAAAAAAAAAAAAA', '  ACK Login ~ABCDEF.ABCDEFGHIJKLMNOP  ', ''];
+  const ticketCommands = ticketMessages.map((message) => { const r = A.parseTicketCommand(message); return { message, result: r ? { command: r.command, name: r.name, hours: r.hours, ticket: r.ticket } : null }; });
+
+  // The pairing link the QR code holds (KON-491).
+  const pairingCases = [
+    { topic: 'kontrol-abc123', secret: 'JBSWY3DPEHPK3PXP' },
+    { topic: '  my topic/with spaces & stuff  ', secret: 'jbsw y3dp ehpk 3pxp' },
+    { topic: 'alerts', secret: 'JBSWY3DPEHPK3PXP', server: 'https://ntfy.example.com' },
+    { topic: 'alerts', secret: 'JBSWY3DPEHPK3PXP', server: 'https://ntfy.example.com/team/' },
+    { topic: 'alerts', secret: 'JBSWY3DPEHPK3PXP', server: 'https://ntfy.sh' },
+    { topic: 'alerts', secret: 'JBSWY3DPEHPK3PXP', server: 'http://ntfy.example.com' },
+    { topic: 'alerts', secret: '' }, { topic: '', secret: 'JBSWY3DPEHPK3PXP' },
+  ];
+  const pairing = pairingCases.map((c) => ({ ...c, uri: A.pairingUri({ phoneNotifyTopic: c.topic, phoneCommandSecret: c.secret, phoneNtfyServer: c.server || '' }) }));
+
+  return { note: 'Made by mobile/tools/make-vectors.js from totp.js and alert-rules.js. Do not edit by hand.', totp, decode, encode, parse, format, tickets, ticketCommands, pairing };
 }
 
 async function main() {

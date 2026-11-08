@@ -17,9 +17,9 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 }
 
 dependencies {
+    implementation("com.google.code.gson:gson:2.11.0")
     testImplementation(kotlin("test"))
     // Reads the conformance vectors that tools/make-vectors.js writes from the extension's own code.
-    testImplementation("com.google.code.gson:gson:2.11.0")
 }
 
 tasks.test {

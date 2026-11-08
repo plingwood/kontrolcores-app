@@ -1100,5 +1100,474 @@
       "code": "111111",
       "message": "ROW Orders 5 #111111"
     }
+  ],
+  "tickets": [
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "command": "ack",
+      "name": "Checkout flow",
+      "ticket": "672da8e0.2RGGOW24BT2W2U27",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "command": "snooze",
+      "name": "Checkout flow",
+      "ticket": "672da8e0.2AVJI4TXDE5WVJES",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "command": "ack",
+      "name": "  Checkout   FLOW ",
+      "ticket": "672da8e0.2RGGOW24BT2W2U27",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "command": "ack",
+      "name": "Shop/Checkout (v2)",
+      "ticket": "672da8e0.5HQASDAHPM6J2WJE",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "JBSWY3DPEHPK3PXP",
+      "command": "snooze",
+      "name": "Login",
+      "ticket": "672da8e0.D634QJ7RKLBQSJVC",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "command": "ack",
+      "name": "Checkout flow",
+      "ticket": "672da8e0.WCC62E5WBHPV4LZE",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "command": "snooze",
+      "name": "Checkout flow",
+      "ticket": "672da8e0.PJ5JS7ROFRVKCE6P",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "command": "ack",
+      "name": "  Checkout   FLOW ",
+      "ticket": "672da8e0.WCC62E5WBHPV4LZE",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "command": "ack",
+      "name": "Shop/Checkout (v2)",
+      "ticket": "672da8e0.DVUNK74FF7HELDEK",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    },
+    {
+      "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",
+      "command": "snooze",
+      "name": "Login",
+      "ticket": "672da8e0.ZUSIQQXYSHPDNJ5M",
+      "checks": [
+        {
+          "at": 1731024000,
+          "ok": true
+        },
+        {
+          "at": 1731027600,
+          "ok": true
+        },
+        {
+          "at": 1731045600,
+          "ok": true
+        },
+        {
+          "at": 1731045601,
+          "ok": false
+        },
+        {
+          "at": 1731023940,
+          "ok": true
+        },
+        {
+          "at": 1730959200,
+          "ok": false
+        }
+      ],
+      "wrongName": false,
+      "wrongCommand": false,
+      "wrongSecret": false
+    }
+  ],
+  "ticketCommands": [
+    {
+      "message": "ACK Checkout flow ~65f3a1b2.ABCDEFGHIJKLMNOP",
+      "result": {
+        "command": "ack",
+        "name": "Checkout flow",
+        "hours": 1,
+        "ticket": "65f3a1b2.ABCDEFGHIJKLMNOP"
+      }
+    },
+    {
+      "message": "snooze Checkout flow ~65f3a1b2.abcdefghijklmnop",
+      "result": {
+        "command": "snooze",
+        "name": "Checkout flow",
+        "hours": 1,
+        "ticket": "65f3a1b2.ABCDEFGHIJKLMNOP"
+      }
+    },
+    {
+      "message": "ack  Checkout   flow  ~65F3A1B2.ABCDEFGHIJKLMNOP",
+      "result": {
+        "command": "ack",
+        "name": "Checkout flow",
+        "hours": 1,
+        "ticket": "65f3a1b2.ABCDEFGHIJKLMNOP"
+      }
+    },
+    {
+      "message": "ACK ~65f3a1b2.ABCDEFGHIJKLMNOP",
+      "result": null
+    },
+    {
+      "message": "RUN Checkout ~65f3a1b2.ABCDEFGHIJKLMNOP",
+      "result": null
+    },
+    {
+      "message": "ACK Checkout ~zz.ABCDEFGHIJKLMNOP",
+      "result": null
+    },
+    {
+      "message": "ACK Checkout ~65f3a1b2.ABCDEFGHIJKLMNO",
+      "result": null
+    },
+    {
+      "message": "ACK Checkout #123456",
+      "result": null
+    },
+    {
+      "message": "ACK Shop/Checkout (v2) ~1.AAAAAAAAAAAAAAAA",
+      "result": {
+        "command": "ack",
+        "name": "Shop/Checkout (v2)",
+        "hours": 1,
+        "ticket": "1.AAAAAAAAAAAAAAAA"
+      }
+    },
+    {
+      "message": "  ACK Login ~ABCDEF.ABCDEFGHIJKLMNOP  ",
+      "result": {
+        "command": "ack",
+        "name": "Login",
+        "hours": 1,
+        "ticket": "abcdef.ABCDEFGHIJKLMNOP"
+      }
+    },
+    {
+      "message": "",
+      "result": null
+    }
+  ],
+  "pairing": [
+    {
+      "topic": "kontrol-abc123",
+      "secret": "JBSWY3DPEHPK3PXP",
+      "uri": "kontrolcore://pair?v=1&topic=kontrol-abc123&secret=JBSWY3DPEHPK3PXP"
+    },
+    {
+      "topic": "  my topic/with spaces & stuff  ",
+      "secret": "jbsw y3dp ehpk 3pxp",
+      "uri": "kontrolcore://pair?v=1&topic=my%20topic%2Fwith%20spaces%20%26%20stuff&secret=JBSWY3DPEHPK3PXP"
+    },
+    {
+      "topic": "alerts",
+      "secret": "JBSWY3DPEHPK3PXP",
+      "server": "https://ntfy.example.com",
+      "uri": "kontrolcore://pair?v=1&topic=alerts&secret=JBSWY3DPEHPK3PXP&server=https%3A%2F%2Fntfy.example.com"
+    },
+    {
+      "topic": "alerts",
+      "secret": "JBSWY3DPEHPK3PXP",
+      "server": "https://ntfy.example.com/team/",
+      "uri": "kontrolcore://pair?v=1&topic=alerts&secret=JBSWY3DPEHPK3PXP&server=https%3A%2F%2Fntfy.example.com%2Fteam"
+    },
+    {
+      "topic": "alerts",
+      "secret": "JBSWY3DPEHPK3PXP",
+      "server": "https://ntfy.sh",
+      "uri": "kontrolcore://pair?v=1&topic=alerts&secret=JBSWY3DPEHPK3PXP"
+    },
+    {
+      "topic": "alerts",
+      "secret": "JBSWY3DPEHPK3PXP",
+      "server": "http://ntfy.example.com",
+      "uri": "kontrolcore://pair?v=1&topic=alerts&secret=JBSWY3DPEHPK3PXP"
+    },
+    {
+      "topic": "alerts",
+      "secret": "",
+      "uri": ""
+    },
+    {
+      "topic": "",
+      "secret": "JBSWY3DPEHPK3PXP",
+      "uri": ""
+    }
   ]
 }
