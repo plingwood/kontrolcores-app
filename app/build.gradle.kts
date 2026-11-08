@@ -29,6 +29,7 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
     buildFeatures { viewBinding = false }
+    testOptions { unitTests { isIncludeAndroidResources = true; all { t -> System.getenv("ROBOLECTRIC_DIR")?.let { d -> t.systemProperty("robolectric.offline", "true"); t.systemProperty("robolectric.dependency.dir", d) } } } }
     lint { abortOnError = true; warningsAsErrors = false }
 }
 
@@ -42,4 +43,7 @@ dependencies {
     // QR scanning without Google Play services (the design keeps Google out as a third party): zxing's own camera screen.
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     testImplementation(kotlin("test"))
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.robolectric:robolectric:4.14.1")
+    testImplementation("androidx.test:core:1.6.1")
 }
