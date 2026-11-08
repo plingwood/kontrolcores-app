@@ -33,7 +33,7 @@ class ScreenshotTest {
         val dm = ctx.resources.displayMetrics
         root.findViewById<com.google.android.material.appbar.MaterialToolbar>(R.id.toolbar)?.apply {
             title = toolbarTitle
-            if (!back) logo = androidx.core.content.ContextCompat.getDrawable(context, R.drawable.ic_launcher)
+            if (!back) logo = androidx.core.content.ContextCompat.getDrawable(context, R.drawable.logo_inset)
             else navigationIcon = androidx.core.content.ContextCompat.getDrawable(context, androidx.appcompat.R.drawable.abc_ic_ab_back_material)?.mutate()?.also { it.setTint(0xFF888888.toInt()) }
         }
         val frame = android.widget.FrameLayout(ctx).apply { setBackgroundColor(androidx.core.content.ContextCompat.getColor(ctx, R.color.kc_bg)); addView(root) }

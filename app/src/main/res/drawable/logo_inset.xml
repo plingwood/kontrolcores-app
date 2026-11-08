@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The mark with room on its right, so the title in the top bar does not touch it. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/ic_launcher" android:insetRight="12dp" />
