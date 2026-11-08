@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+        <TextView android:id="@+id/meta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textAppearance="?attr/textAppearanceBodySmall" />
+        <TextView android:id="@+id/stepLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/failed_step" android:textAppearance="?attr/textAppearanceLabelLarge" />
+        <TextView android:id="@+id/step" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceBodyLarge" android:textIsSelectable="true" />
+        <TextView android:id="@+id/stepDetail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:fontFamily="monospace" android:textAppearance="?attr/textAppearanceBodyMedium" android:textIsSelectable="true" />
+        <TextView android:id="@+id/url" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:fontFamily="monospace" android:textAppearance="?attr/textAppearanceBodySmall" android:textIsSelectable="true" />
+        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textAppearance="?attr/textAppearanceBodyMedium" android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/ack" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/acknowledge" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/snooze" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/snooze_1h" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/run" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/run_again" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/stop" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/stop" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/share" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/share" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/open" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/open_page" />
+    </LinearLayout>
+</ScrollView>

@@ -16,6 +16,8 @@ data class NtfyMessage(
     val tags: List<String>,
     val priority: Int,
     val actions: List<NtfyAction>,
+    /** The line as ntfy sent it, so the app can keep it and read it again later. */
+    val raw: String = "",
 ) {
     val isMessage: Boolean get() = event == "message"
 
@@ -37,6 +39,7 @@ data class NtfyMessage(
                 tags = tags,
                 priority = o.get("priority")?.takeIf { it.isJsonPrimitive }?.let { runCatching { it.asInt }.getOrNull() } ?: 3,
                 actions = actions,
+                raw = text,
             )
         }
 

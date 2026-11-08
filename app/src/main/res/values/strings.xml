@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">KontrolCore</string>
+    <string name="channel_alerts">Alerts</string>
+    <string name="channel_other">Other messages</string>
+    <string name="channel_service">Connection</string>
+    <string name="listening">Listening for alerts</string>
+    <string name="nothing_needs_you">Nothing needs you.</string>
+    <string name="not_paired_title">Pair with KontrolCore</string>
+    <string name="not_paired_text">In KontrolCore on your computer, open Alerts, Channels, and choose Pair a phone. Then scan the code here.</string>
+    <string name="scan">Scan the code</string>
+    <string name="paste_link">Paste the pairing link instead</string>
+    <string name="acknowledge">Acknowledge</string>
+    <string name="snooze_1h">Snooze 1 h</string>
+    <string name="run_again">Run again</string>
+    <string name="stop">Stop</string>
+    <string name="share">Share summary</string>
+    <string name="open_page">Open the page</string>
+    <string name="status">Ask for status</string>
+    <string name="run_or_stop">Run or stop…</string>
+    <string name="failed_step">Failed step</string>
+    <string name="pair">Pair</string>
+</resources>

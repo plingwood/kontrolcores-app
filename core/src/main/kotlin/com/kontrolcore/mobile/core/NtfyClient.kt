@@ -88,8 +88,12 @@ class CommandSender(
     private val sleep: (Long) -> Unit = { Thread.sleep(it) },
     /** Seconds left in a step below which the app waits for the next one. */
     private val margin: Long = 3,
+    /** The step the last code was used in, if an earlier sender used one: the app makes a new sender after the key has been locked again. */
+    lastCounter: Long = Long.MIN_VALUE,
 ) {
-    private var lastCounter = Long.MIN_VALUE
+    /** The step of the last code sent (Long.MIN_VALUE before any). */
+    var lastCounter: Long = lastCounter
+        private set
 
     data class Sent(val message: String, val at: Long, val waitedSeconds: Long)
 
