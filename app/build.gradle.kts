@@ -1,7 +1,16 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     kotlin("android")
 }
+
+// Release signing comes from outside the repository: mobile/keystore.properties (git-ignored) or KC_* environment variables. With neither, the release build is unsigned.
+val signingProps = Properties().apply {
+    val f = rootProject.file("keystore.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
+}
+fun signing(key: String, env: String): String? = signingProps.getProperty(key) ?: System.getenv(env)
 
 android {
     namespace = "com.kontrolcore.mobile"
@@ -12,12 +21,24 @@ android {
         // Android 11: the Keystore can hold a key that needs a fresh unlock every 30 seconds (setUserAuthenticationParameters), which is how the setup key stays behind the lock.
         minSdk = 30
         targetSdk = 35
-        versionCode = 1
+        // Play wants a higher versionCode for every upload: pass -PversionCode=N (or edit here).
+        versionCode = (project.findProperty("versionCode") as String?)?.toInt() ?: 1
         versionName = "0.1.0"
+    }
+
+    signingConfigs {
+        val file = signing("storeFile", "KC_KEYSTORE")
+        if (file != null) create("upload") {
+            storeFile = rootProject.file(file).let { if (it.exists()) it else File(file) }
+            storePassword = signing("storePassword", "KC_KEYSTORE_PASSWORD")
+            keyAlias = signing("keyAlias", "KC_KEY_ALIAS")
+            keyPassword = signing("keyPassword", "KC_KEY_PASSWORD") ?: signing("storePassword", "KC_KEYSTORE_PASSWORD")
+        }
     }
 
     buildTypes {
         release {
+            signingConfigs.findByName("upload")?.let { signingConfig = it }
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
