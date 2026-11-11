@@ -20,7 +20,7 @@ Use **Play App Signing** (the Console default for a new app): Google keeps the r
     ./gradlew :app:bundleRelease -PversionCode=2     # app/build/outputs/bundle/release/app-release.aab
 Every upload needs a higher `versionCode` than the last (`-PversionCode=N`); `versionName` is in `app/build.gradle.kts`. Without `keystore.properties` or the `KC_KEYSTORE`,
 `KC_KEYSTORE_PASSWORD`, `KC_KEY_ALIAS` (and optional `KC_KEY_PASSWORD`) environment variables the release build is **unsigned** and Play refuses it.
-The package name is `com.kontrolcore.mobile`; **it can never change after the first upload**, so decide now that it is right.
+The application ID is `com.kontrolcore` (the code keeps the namespace `com.kontrolcore.mobile`, which is separate); **it can never change after the first upload**, so decide now that it is right.
 
 ## 3. Console set-up
 - **Create app**: name KontrolCore (check it is free; Play titles are unique), default language, App (not game), **Free**. A free app cannot become paid later.

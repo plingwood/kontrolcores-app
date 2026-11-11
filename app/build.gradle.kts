@@ -17,7 +17,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.kontrolcore.mobile"
+        applicationId = "com.kontrolcore"
         // Android 11: the Keystore can hold a key that needs a fresh unlock every 30 seconds (setUserAuthenticationParameters), which is how the setup key stays behind the lock.
         minSdk = 30
         targetSdk = 35
