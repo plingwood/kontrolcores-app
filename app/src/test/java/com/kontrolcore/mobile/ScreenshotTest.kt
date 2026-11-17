@@ -23,7 +23,7 @@ import java.io.FileOutputStream
 /** Draws the real layouts with the real theme and sample data, to look at them without a phone. Writes PNGs to build/screens. Not a test of behaviour. */
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [34], qualifiers = "w393dp-h852dp-xxhdpi", application = Application::class)
+@Config(sdk = [34], qualifiers = "w360dp-h640dp-xxhdpi", application = Application::class)
 class ScreenshotTest {
     private val ctx: Context get() = ContextThemeWrapper(ApplicationProvider.getApplicationContext<Application>(), R.style.Theme_KontrolCore)
     private fun inflate(layout: Int): View = LayoutInflater.from(ctx).inflate(layout, FrameHolder(ctx), false)
@@ -62,11 +62,9 @@ class ScreenshotTest {
         val col = LinearLayout(ctx).apply { orientation = LinearLayout.VERTICAL }
         row(col, "Checkout flow", "Click \"Pay now\"", "Failing · 4 min ago · 3 alerts", R.color.kc_red)
         row(col, "Login", "Page is asking for a sign-in", "Needs a look · 1 h ago · 1 alert", R.color.kc_amber)
-        row(col, "Nightly regression", "Suite failed: 1 of 4", "Failing · 2 h ago · 2 alerts", R.color.kc_red)
         row(col, "Uptime check", "Has gone quiet", "Gone quiet · 3 h ago · 1 alert", R.color.kc_blue)
         row(col, "Search", "Has gone quiet", "Acknowledged · 5 h ago · 1 alert", R.color.kc_ack, dim = true)
         host.addView(col, 0)
-        v.findViewById<TextView>(R.id.message).apply { visibility = View.VISIBLE; text = "Sent. Waiting for your computer (it looks about once a minute)…" }
         return v
     }
 
