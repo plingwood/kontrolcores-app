@@ -5,7 +5,7 @@ plugins {
     kotlin("android")
 }
 
-// Release signing comes from outside the repository: mobile/keystore.properties (git-ignored) or KC_* environment variables. With neither, the release build is unsigned.
+// Release signing comes from outside the repository: keystore.properties beside settings.gradle.kts (git-ignored) or KC_* environment variables. With neither, the release build is unsigned.
 val signingProps = Properties().apply {
     val f = rootProject.file("keystore.properties")
     if (f.exists()) f.inputStream().use { load(it) }

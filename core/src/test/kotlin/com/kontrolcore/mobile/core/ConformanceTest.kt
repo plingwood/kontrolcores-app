@@ -11,7 +11,7 @@ import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
-/** The app against the extension: every case here was made by the extension's own code (mobile/tools/make-vectors.js). */
+/** The app against the extension: every case here was made by the extension's own code (tools/mobile-vectors.js in the KontrolCore extension repository). */
 class ConformanceTest {
     private val vectors: JsonObject = ConformanceTest::class.java.getResourceAsStream("/vectors.json")!!
         .bufferedReader().use { JsonParser.parseString(it.readText()).asJsonObject }

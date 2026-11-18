@@ -1,5 +1,5 @@
 {
-  "note": "Made by mobile/tools/make-vectors.js from totp.js and alert-rules.js. Do not edit by hand.",
+  "note": "Made by tools/mobile-vectors.js in the KontrolCore extension repository from totp.js and alert-rules.js. Do not edit by hand.",
   "totp": [
     {
       "secret": "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ",

@@ -5,7 +5,7 @@ Play's rules change: check each "verify" line against the Play Console help befo
 
 ## 1. Make the upload key once (the owner; keep it and its password safe, and never commit them)
     keytool -genkeypair -v -keystore kontrolcore-upload.jks -alias upload -keyalg RSA -keysize 2048 -validity 10000
-Put the file outside the repository (or in `mobile/`, where `*.jks` is git-ignored) and make `mobile/keystore.properties` (also git-ignored):
+Put the file outside the repository (or in the repository folder, where `*.jks` is git-ignored) and make `keystore.properties` beside `settings.gradle.kts` (also git-ignored):
 
     storeFile=/path/to/kontrolcore-upload.jks
     storePassword=...
@@ -15,7 +15,6 @@ Put the file outside the repository (or in `mobile/`, where `*.jks` is git-ignor
 Use **Play App Signing** (the Console default for a new app): Google keeps the real signing key, this is only the upload key, and a lost upload key can be reset through Play support.
 
 ## 2. Build the bundle
-    cd mobile
     ./gradlew :core:test :app:lintDebug
     ./gradlew :app:bundleRelease -PversionCode=2     # app/build/outputs/bundle/release/app-release.aab
 Every upload needs a higher `versionCode` than the last (`-PversionCode=N`); `versionName` is in `app/build.gradle.kts`. Without `keystore.properties` or the `KC_KEYSTORE`,
@@ -31,7 +30,7 @@ The application ID is `com.kontrolcore` (the code keeps the namespace `com.kontr
   - *Foreground service*: the app runs one of type **special use** to keep the alert stream open. Subtype text (already in the manifest): "Keeps a connection to the person's own ntfy alert topic open so KontrolCore alerts arrive at once." Console asks for a short video and why a normal push or WorkManager job will not do: alerts come over a stream the person's own ntfy topic serves, and we run no push service of ours, so no Google push is available to wake the app (verify the form's current wording; special-use declarations are reviewed by hand).
   - *Permissions*: camera (scan the pairing QR code, nothing is stored), notifications, internet, boot completed (resume listening), biometric.
   - *Ads*: none. *Target audience*: 18 and over. *Content rating*: the questionnaire, no user-generated content, no violence. *App access*: needs a KontrolCore browser extension to pair with: give the reviewers a pairing code or a short note and a demo topic, otherwise review fails on "cannot sign in".
-- **Store listing** needs: short description (80), full description (4000), icon 512 px (from `design/logo`, the same tile as the extension), a feature graphic 1024x500, at least 2 phone screenshots (the Robolectric ones in `mobile/app/build/screens` are a start; take real ones on a phone), and a support email.
+- **Store listing** needs: short description (80), full description (4000), icon 512 px (from `design/logo`, the same tile as the extension), a feature graphic 1024x500, at least 2 phone screenshots (the ones in `store/screenshots` are drawn from sample data; take real ones on a phone), and a support email.
 
 ## 4. Data safety answers (draft, to check against the final build)
 The app has no server of ours and no analytics, ads or crash reporter. It holds on the phone: the topic name, the setup key (Keystore, encrypted, never shown again), and the last 300 alert messages (private app storage, not backed up).
